@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .accordion-item {
+        border: 1px solid rgb(156 163 175 / 0.7);
+        border-left: none;
+        border-right: none;
+    }
+
+    .accordion-item:not(:first-child) {
+        border-top: none;
+    }
+
+    .accordion-item .accordion-content {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .accordion-item .accordion-content.hide {
+        height: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .accordion-item .trigger.active {
+        color: rgb(5, 150, 105, 1);   
+    }
+
+    .accordion-item .trigger h5,
+    .accordion-item .trigger svg {
+        color: inherit;
+    }
+
+    .accordion-icon.active  svg {
+        transform: rotate(180deg);
+    }
+}
